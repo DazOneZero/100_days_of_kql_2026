@@ -1,0 +1,40 @@
+# Name
+Name goes here
+
+# Description
+Description goes here
+
+# References
+- links go here
+
+# Author
+- DazOneZero
+  
+# Socials
+- www.linkedin.com/in/darrel-lang
+- @PrimisResolvere
+
+# Threats
+- name / type of threat listed here
+- e.g., CastleLoader
+- e.g., castleflex
+
+# MITRE Techniques
+- MITRE ATT&CK TID + Name here
+
+# Query
+
+```
+
+// Name goes here + type of detection (e.g., commandline, process, content, etc)
+// Threat name
+// Detects <insert type of activity being queried>
+// DeviceProcessEvents
+//  | where FileName =~ "schtasks.exe"
+//  // Check for the creation flag
+//  | where ProcessCommandLine has_any ("/create", "-create")
+//  // Check for the malicious payload trigger
+//  | where ProcessCommandLine has "rundll32"
+//  | project TimeGenerated, DeviceName, AccountName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine, FolderPath, SHA256
+
+```
