@@ -25,9 +25,9 @@ Ryuk Ransomware are reported to establish Wake-on-LAN processes and utilise remo
 
 ```
 
-// Name goes here + type of detection (e.g., commandline, process, content, etc)
-// Threat name
-// Detects <insert type of activity being queried>
+// Ryuk Ransomware persistence & lateral movement behaviours
+// Ryuk
+// Detects Wake-on-LAN followed by initialisation of remote access tools
 let WoLTraffic = 
     DeviceNetworkEvents
     | where TimeGenerated > ago(30d)
